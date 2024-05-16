@@ -16,6 +16,7 @@
     "pinia": "^2.1.7",
     "primevue": "^3.49.1",
     "sass": "^1.69.7",
+    "unocss": "^0.60.2",
     "vee-validate": "^4.12.4"
   },
   "devDependencies": {

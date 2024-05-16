@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="flex flex-col gap10">
+  <div class="w50 flex flex-col gap10 bg-amber">
     <NuxtLink to="about">
       go about
     </NuxtLink>
