@@ -1,22 +1,51 @@
 <script setup lang="ts">
+definePageMeta({
+  layout: 'default',
+})
 
+const router = useRouter()
+
+// const route = useRoute()
+// route.meta.layout = 'custom'
+
+const layoutName = ref('default')
+function changeLayout() {
+  layoutName.value = layoutName.value === 'default' ? 'custom' : 'default'
+}
+
+function routerPush(name: string) {
+  router.push({ name })
+}
 </script>
 
 <template>
-  <div class="w50 flex flex-col gap10 bg-amber">
-    <NuxtLink to="about">
-      go about
-    </NuxtLink>
-    <NuxtLink to="ui">
-      go primevue ui
-    </NuxtLink>
-    <NuxtLink to="dark">
-      go dark demo
-    </NuxtLink>
-    <NuxtLink to="valid">
-      go form valid
-    </NuxtLink>
-  </div>
+  <NuxtLayout :name="layoutName">
+    <p>router</p>
+    <div class="flex gap10">
+      <Button @click="routerPush('about')">
+        about page
+      </Button>
+      <Button @click="routerPush('ui')">
+        primevue ui
+      </Button>
+      <Button @click="routerPush('dark')">
+        dark demo
+      </Button>
+      <Button @click="routerPush('valid')">
+        form valid
+      </Button>
+      <Button @click="routerPush('lay-child')">
+        go to lay child
+      </Button>
+    </div>
+
+    <p>event</p>
+    <div class="flex gap10">
+      <Button @click="changeLayout">
+        change layout
+      </Button>
+    </div>
+  </NuxtLayout>
 </template>
 
 <style scoped lang="scss">
