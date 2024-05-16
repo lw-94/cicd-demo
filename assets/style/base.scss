@@ -1,0 +1,12 @@
+@import '@unocss/reset/tailwind.css' layer(tailwind-reset);
+@import 'primevue/resources/themes/lara-light-green/theme.css'
+  layer(lara-light-green);
+
+@layer tailwind-reset, lara-light-green, common;
+
+@layer common {
+  .dark {
+    background-color: black;
+    color: white;
+  }
+}
