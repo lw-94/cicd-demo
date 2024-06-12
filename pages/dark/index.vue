@@ -18,5 +18,4 @@ const toggleDark = useToggle(isDark)
 </template>
 
 <style scoped lang="scss">
-//
 </style>

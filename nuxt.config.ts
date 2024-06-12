@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-primevue',
     '@vee-validate/nuxt',
+    '@nuxtjs/color-mode',
   ],
   primevue: {},
   css: [

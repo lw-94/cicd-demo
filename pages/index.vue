@@ -38,16 +38,34 @@ function routerPush(name: string) {
         go to lay child
       </Button>
     </div>
-
+    <Divider />
     <p>event</p>
     <div class="flex gap10">
       <Button @click="changeLayout">
         change layout
       </Button>
     </div>
+    <Divider />
+    <h1>Color mode: {{ $colorMode.value }}</h1>
+    <select v-model="$colorMode.preference">
+      <option value="light">
+        Light
+      </option>
+      <option value="dark">
+        Dark
+      </option>
+    </select>
   </NuxtLayout>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 //
+body {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
+}
+.dark-mode body {
+  background-color: #091a28;
+  color: #ebf4f1;
+}
 </style>

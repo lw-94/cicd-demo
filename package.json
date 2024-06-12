@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.2",
+    "@nuxtjs/color-mode": "^3.4.1",
     "@unocss/eslint-plugin": "^0.58.3",
     "@unocss/nuxt": "^0.58.3",
     "@vee-validate/nuxt": "^4.12.5",
