@@ -16,6 +16,11 @@ function changeLayout() {
 function routerPush(name: string) {
   router.push({ name })
 }
+//
+onMounted(() => {
+  const jwt = getCookie('jwt')
+  console.log('🚀 ~ jwt:', jwt)
+})
 </script>
 
 <template>
